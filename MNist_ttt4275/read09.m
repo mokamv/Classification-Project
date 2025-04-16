@@ -6,7 +6,7 @@ row_size=fread(fid,1,'int32','ieee-be');
 col_size=fread(fid,1,'int32','ieee-be');
 
 vec_size = row_size*col_size;
- trainv=zeros(num_train,vec_size);
+trainv=zeros(num_train,vec_size);
 
 for k = 1:num_train
 	for n = 1:vec_size
@@ -23,11 +23,11 @@ row_size=fread(fid,1,'int32','ieee-be');
 col_size=fread(fid,1,'int32','ieee-be');
 
 vec_size = row_size*col_size;
- testv=zeros(num_test,vec_size);
+testv=zeros(num_test,vec_size);
 
 for k = 1:num_test
 	for n = 1:vec_size
-        	testv(k,n) =fread(fid,1,'uchar','ieee-be');
+        testv(k,n) =fread(fid,1,'uchar','ieee-be');
 	end
 end
 
